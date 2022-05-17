@@ -1,7 +1,3 @@
-from distutils import errors
-from distutils.log import error
-from gc import callbacks
-from importlib.metadata import distribution
 import streamlit as st
 import pandas as pd 
 import numpy as np
@@ -12,7 +8,6 @@ from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode
 import pandas as pd
 from random import random
 from typing import Dict, List
-import altair as alt
 
 
 st.set_page_config(
@@ -344,7 +339,7 @@ class Investment:
 #Display the grid
 st.header("Launchpad Valuation Simulation")
 st.subheader("Simulation Parameters")
-st.caption("""The values in the table below can be altered by the user. Please ensure that the 'Distribution' columns sums to 1.
+st.caption("""The values in the table below can be altered by the user. Please ensure that the 'Distribution' column sums to 1.
             For scenario analysis change the 'CAGR', 'Management_Fees' or 'Distribution' columns. Increasing the 'Fail' distribution
             value to 0.4 would be a good way to conduct a stress test.""")
 
